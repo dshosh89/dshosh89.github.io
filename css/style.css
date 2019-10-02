@@ -1,0 +1,178 @@
+/* CSS files add styling rules to your content */
+
+body {
+  margin:0;padding:0;
+  min-height:1024px;
+  font-family: 'Arbutus Slab', serif;
+}
+
+.topnav {
+  float: right;
+  color: #464646;
+  text-align: right;
+  padding: 20px 25px;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  height:auto;
+}
+
+.details{
+    width: 33.33%;
+    text-align : center;
+}
+
+ .space{
+   align-self:flex-end;
+   width:100%;
+
+}
+a{
+  color:#464646;
+}
+
+.topnav a{
+  padding: 0px 10px;
+}
+.topnav a.active {
+  color:#464646;
+}
+#logo {
+  display: block;
+  margin-left: 30%;
+  margin-right: 30%;
+  padding-top: 50px;
+  /*width: 75%;*/
+}
+
+#go_back {
+  margin-left:50px;
+}
+#detailImage {
+  margin-left:20px;
+}
+
+#addToChart {
+  margin-left:800px;
+  font-family: 'Arbutus Slab', serif;
+  width=100px;
+  height = 50px;
+  background-color: #464646;
+  border: none;
+  color: white;
+  padding: 20px 80px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin-left: 300px;
+
+
+}
+
+
+.detailBox {
+  margin-left:50px;
+  font-size: 15px;
+  float: left;
+
+}
+
+.bottomnav {
+  float:center;
+  color: #464646;
+  text-align: center;
+  padding: 20px 25px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: 'Arbutus Slab', serif;
+}
+
+.WalnutBun
+{
+
+  float: left;
+  margin-left: 300px;
+
+}
+.bottomnav a{
+  padding:0px 30px;
+}
+img {
+  display: block;
+  margin-left: 20px;
+  margin-right: auto;
+  padding:50px 30px;
+
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+}
+
+.page-background {
+  background:url("https://cdn.glitch.com/824c78ca-4ca8-46f7-900b-708ca8c7e72f%2F33438870383_5c75d89e43_o.png?v=1569618838939");
+  background-size:contain;
+  background-repeat:no-repeat;
+  height:646px;
+}
+
+.row-item {
+  background: url("https://cdn.glitch.com/824c78ca-4ca8-46f7-900b-708ca8c7e72f%2Fnotext.png?v=1569713022090");
+  background-size:cover;
+  background-repeat:no-repeat;
+  width:32%;
+  margin: 1.66% auto;
+  height:auto;
+  background-position: center;
+
+}
+
+.row-item p {
+  height:30px;
+  text-align:center;
+  margin:10px auto;
+  font-size: 24px;
+  color: #464646;
+
+}
+
+.details {
+  height:250px;
+  width:100%;
+  padding:10px;
+  box-sizing:border-box;
+  display:flex;
+
+  .back {
+  color: #464646;
+  padding: 20px 25px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: 'Arbutus Slab', serif;
+  margin: 10px auto;
+  }
+
+.boxed {
+  border: 5px;
+  color: #464646 ;
+}
+.button {
+  background-color:#464646;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
