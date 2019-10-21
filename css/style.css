@@ -177,7 +177,8 @@ a {
 }
 
 .button {
-  margin-left: 200px;
+margin-left:auto;
+  margin-right:auto;
   width: 200px;
   height: 50px;
   background-color: #464646;
@@ -236,3 +237,34 @@ a {
 }
 .bottomnav2 a {
   padding: 0px 30px;
+}
+
+.cart sup {
+  background: #ccc;
+  border-radius:45%;
+  font-weight:bold;
+  padding:3px;
+  font-size:12px;
+}
+
+hr {
+  width:95%;
+  color:#979797;
+}
+
+h3 img {
+  margin:auto;
+}
+
+#cartDetails p, .cartBox p {display:inline-block;text-align:center;}
+#item {width:40%;box-sizing:border-box;padding-right:315px;}
+#price {width:20%;}
+#qty {width:15%;}
+#total {width:20%;}
+
+.cartBox img {padding:0;display:inline;}
+
+#detailName {width:30%;}
+#detailQty {width:16%;}
+#itemPrice {width:16%}
+#cartTotal {width:20%;}
