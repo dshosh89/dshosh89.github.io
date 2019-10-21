@@ -2,14 +2,20 @@
 <html>
   <head>
     <title>BunBun Bakery</title>
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Arbutus+Slab&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
   </head>
-  <body>
+  <body class='detailsPage'>
     <header>
       <div class="topnav">
         <a class="active"></a>
         <a href="#Login">LOG IN</a>
-        <a href="#cart">CART</a>
+      <a href="cart.html" class="cart">CART<sup></sup></a>
         <a href="#checkout">CHECKOUT</a>
       </div>
     </header>
@@ -24,7 +30,7 @@
     <div class="bottomnav2">
       <a class="active"></a>
       <a href="#about">OUR STORY</a>
-      <a href="#menu">MENU</a>
+      <a href="product.html">MENU</a>
       <a href="#location">LOCATION</a>
       <a href="#contact">CONTACT</a>
       <a href="#order">ORDER ONLINE</a>
@@ -46,22 +52,22 @@
           class="detailBox"
         >
           <p>DESCRIPTION</p>
-          <p>
+          <p class='description'>
             One of our year-round favorites, the walnut bun does not disappoint. Freshly crushed walnuts bring out the subtle flavors of cinnamon. These buns can be delivered.
           </p>
         </div>
       </div>
       <div class="flex-box2">
-        <p class="WalnutBun">WALNUT BUN</p>
+        <p class="name">WALNUT BUN</p>
         <br />
         <p class="price">$3.50 Each</p>
-        <p class="QuantityButton">
+        <p class="quantity">
           Quantity:
           <select>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
-            <option value="5">4</option>
+            <option value="4">4</option>
           </select>
         </p>
         <p class="glaze">
