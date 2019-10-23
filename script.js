@@ -67,6 +67,6 @@ $(document).ready(function() {
     $(".cart sup").text(cartTotal);
     //update that value in the HTML of the 'cart' link
     sessionStorage.setItem("cartTotal", cartTotal);
-    //update the value in session storage; should change back to zero when the user leaves the page. but this is not being reflected//
+    //update the value in session storage; should change back to zero when the user leaves the page//
   });
 });
