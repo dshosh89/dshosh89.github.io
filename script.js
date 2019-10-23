@@ -1,33 +1,30 @@
 
 
 $(document).ready(function() {
-  /* ^this puts everything in a function that runs once the page has fully loaded.*/
+  /* ^everything is in a function that runs once the page has fully loaded.*/
   var cartTotal = sessionStorage.getItem("cartTotal"); //get the # of things in the cart from storage
   $(".cart sup").text(cartTotal); //change the text in the cart link to be the # we got from storage
 
 
 
   $(".details a").click(function() {//set the click event on the 'view details' links
-    /* ^all <a> tags that are children of an element with a class of 'details' will now fire this function on being clicked.*/
+    /* ^all <a> tags that are children of an element with a class of 'details' will now trigger this function when clicked.*/
     var product = $(this).parent().parent().find("p").html();
     /*^ now the variable 'product' has the value of that p tag's text from the HTML */
     sessionStorage.setItem("product", product);
-    /* ^save it in local storage as 'product' - we will retrieve it later by using this name.*/
+    /* ^save it in session storage as 'product'*/
   });
 
   if ($("body").hasClass("detailsPage")) {
-    /*^this is an easy way to check if we are on the details page or not, since the script runs on every page.*/
+    /*^can check if we are on the details page or not, since it should run on every page.*/
     var productName = sessionStorage.getItem("product");
     /*^ get the bun name we stored earlier and set it as a new variable*/
     var price;
     var description;
-    /* ^we will need these two values in a minute */
     $(".name").text(productName);
-    /* ^this sets the text in the sidebar to the name of the bun we picked on the last page
+    /* ^this sets the text in the sidebar to the name of the bun picked on the last page
 
-    go through all six buns and sets the price
-    and description variables above to be different values, depending on the bun name from
-    local storage*/
+    go through all six buns and sets the price and description variables above to be different values*/
     if (productName == "Walnut") {
       price = "$3.50";
       description =
@@ -60,8 +57,7 @@ $(document).ready(function() {
     }
     $(".description").text(description);
     $(".price").text(price);
-    /*^ now that we have set values for the price and description variables through our if statements, we can set the text of
-    those two paragraphs to be the value of the variables */
+    /*^ already set values for the price and description variables through if statements, so can set the text of those two paragraphs to be the value of the variables */
     }
 
   $("button").click(function() {
@@ -71,6 +67,6 @@ $(document).ready(function() {
     $(".cart sup").text(cartTotal);
     //update that value in the HTML of the 'cart' link
     sessionStorage.setItem("cartTotal", cartTotal);
-    //update the value in local storage so it will be correct even if user goes to another page
+    //update the value in session storage; should change back to zero when the user leaves the page. but this is not being reflected//
   });
 });
