@@ -2,7 +2,7 @@
 
 $(document).ready(function() {
   /* ^this puts everything in a function that runs once the page has fully loaded.*/
-  var cartTotal = localStorage.getItem("cartTotal"); //get the # of things in the cart from storage
+  var cartTotal = sessionStorage.getItem("cartTotal"); //get the # of things in the cart from storage
   $(".cart sup").text(cartTotal); //change the text in the cart link to be the # we got from storage
 
 
@@ -11,13 +11,13 @@ $(document).ready(function() {
     /* ^all <a> tags that are children of an element with a class of 'details' will now fire this function on being clicked.*/
     var product = $(this).parent().parent().find("p").html();
     /*^ now the variable 'product' has the value of that p tag's text from the HTML */
-    localStorage.setItem("product", product);
+    sessionStorage.setItem("product", product);
     /* ^save it in local storage as 'product' - we will retrieve it later by using this name.*/
   });
 
   if ($("body").hasClass("detailsPage")) {
     /*^this is an easy way to check if we are on the details page or not, since the script runs on every page.*/
-    var productName = localStorage.getItem("product");
+    var productName = sessionStorage.getItem("product");
     /*^ get the bun name we stored earlier and set it as a new variable*/
     var price;
     var description;
@@ -70,7 +70,7 @@ $(document).ready(function() {
     //increase the number of items in the cart by one
     $(".cart sup").text(cartTotal);
     //update that value in the HTML of the 'cart' link
-    localStorage.setItem("cartTotal", cartTotal);
+    sessionStorage.setItem("cartTotal", cartTotal);
     //update the value in local storage so it will be correct even if user goes to another page
   });
 });
