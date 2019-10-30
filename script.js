@@ -30,6 +30,7 @@ $(document).ready(function() {
     go through all six buns and sets the price
     and description variables above to be different values, depending on the bun name from
     local storage*/
+    console.log(productName)
     if (productName == "Walnut") {
       price = "$3.50";
       description =
@@ -62,6 +63,7 @@ $(document).ready(function() {
     }
     $(".description").text(description);
     $(".price").text(price);
+    console.log(price)
       sessionStorage.setItem('price',price);
     /*^ now that we have set values for the price and description variables through our if statements, we can set the text of
     those two paragraphs to be the value of the variables */
@@ -96,8 +98,13 @@ $(document).ready(function() {
         $("#itemPrice").html("$" + itemPrice);
         $("#detailQty").html(detailQty);
         $("#detailGlaze").html(detailGlaze);
-        $("#total").html(total); 
+        $("#cartTotal").html(total);
   }
+  
+  $('.delete').click(function(){
+    $('.cartBox').html('');
+    cartTotal = 0;
+        $(".cart sup").text(cartTotal);
+    sessionStorage.setItem("cartTotal",cartTotal)
+  });
 });
-
-     
