@@ -98,7 +98,7 @@ $(document).ready(function() {
         $("#itemPrice").html("$" + itemPrice);
         $("#detailQty").html(detailQty);
         $("#detailGlaze").html(detailGlaze);
-1                    cv});
+1       });
 });
 });
 });
