@@ -95,10 +95,9 @@ $(document).ready(function() {
         $("#detailName").html(detailName);
         $("#itemPrice").html("$" + itemPrice);
         $("#detailQty").html(detailQty);
-        $("#detailGlaze").html(detailGlaze);       });
+        $("#detailGlaze").html(detailGlaze);
+        $("#total").html(total); 
+  }
 });
-});
-});
-});
-});
-         
+
+     
