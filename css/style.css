@@ -257,14 +257,14 @@ h3 img {
 }
 
 #cartDetails p, .cartBox p {display:inline-block;text-align:center;}
-#item {width:40%;box-sizing:border-box;padding-right:315px;}
+#item {width:39%;box-sizing:border-box;}
 #price {width:20%;}
 #qty {width:15%;}
 #total {width:20%;}
 
 .cartBox img {padding:0;display:inline;}
 
-#detailName {width:30%;}
+#detailName {width:26%;}
 #detailQty {width:16%;}
 #itemPrice {width:16%}
 #cartTotal {width:20%;}
