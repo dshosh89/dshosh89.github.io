@@ -1,0 +1,153 @@
+/* CSS files add styling rules to your content */
+
+@font-face {
+  font-family: "Din";
+  src: url("https://cdn.glitch.com/78b0abca-2644-43d4-8b2a-290653e271f6%2FDIN%20Alternate%20Regular.otf?v=1575337927318") format("opentype");
+}
+body {
+  font-family: "Reem Kufi", arial, sans-serif;
+  color:#882719;
+  background-color:#FFFEF9;
+  letter-spacing:-0.75px;
+  margin:0;
+}
+
+section {
+  padding:25px;
+  text-align:center;
+}
+
+header {
+  background-image:url('https://cdn.glitch.com/78b0abca-2644-43d4-8b2a-290653e271f6%2Fnew_banner.png?v=1575268575397');
+  background-size:cover;
+  background-repeat:repeat;
+  text-align:center;
+  padding:20px;
+  background-position:top;
+height:360px}
+
+
+a {
+  text-decoration:none;
+  font-size:12px;
+  font-weight:bold;
+}
+
+h3, P {
+  text-align:center;
+  max-width:650px;
+  margin:25px auto;
+  line-height:1.5em;
+  font-size:28px;
+}
+
+.map-icon {
+  transition:all 0.5s ease-out;
+  position:absolute;
+  font-size:12px;
+  border-bottom:1px solid transparent;
+  text-align:center;
+}
+
+.map-icon::before {
+  transition: all 0.75s ease-out;
+  vertical-align:middle;
+  display:block;
+  margin:auto;
+  content:url('https://cdn.glitch.com/78b0abca-2644-43d4-8b2a-290653e271f6%2Fplaceholder3.png?v=1574050985577');
+}
+
+.map-icon:hover {
+  font-size:14px;
+  cursor:pointer;
+}
+
+p {
+  font-size:21px;
+  font-weight:400;
+}
+#cards {position:relative;}
+
+
+.map-icon:visited {
+  color:black;
+}
+
+.hidden-anchor {
+  vertical-align:top;
+}
+.map-icon:nth-child(1) {top:25%;left:20%;}
+.map-icon:nth-child(2) {top:65%;left:35%}
+.map-icon:nth-child(3) {top:100%;left:50%;}
+.map-icon:nth-child(4)  {top:65%;left:65%;}
+.map-icon:nth-child(5)  {top:25%;left:80%;}
+
+
+.card {height:80%;max-width:900px;margin:20px auto;min-height:500px;z-index:1000;border:2px solid #882719;display:flex;}
+.leftside {width:37%;display:inline-block;vertical-align:top;margin:0;border-right:1px solid #882719;}
+.leftside h4 {background:gray;height:60px;margin:0;background-color:#882719;color:white;padding-top:25px;}
+.leftside div {border:1px solid #882719;width:80%;margin:10px auto;}
+.leftside p {font-size:18px;line-height:20px;width:90%;margin:20px auto;}
+.rightside {height:500px;display:flex;transition:1s all ease-out;color:transparent;padding:10px;background-size:cover;background-origin:content-box;background-repeat: no-repeat;}
+.rightside p {font-size:20px;line-height:24px;}
+.card:nth-of-type(1) .rightside{background-image:url('https://cdn.glitch.com/78b0abca-2644-43d4-8b2a-290653e271f6%2Fmsanmiguelteindas4_1393015020.648.png?v=1575603757641')}
+.card:nth-of-type(3) .rightside{background-image:url('https://cdn.glitch.com/78b0abca-2644-43d4-8b2a-290653e271f6%2Fantonmartin.png?v=1575603738365')}
+.card:nth-of-type(5) .rightside{background-image:url('https://cdn.glitch.com/78b0abca-2644-43d4-8b2a-290653e271f6%2FLaCocinaDeSanAntA%CC%82%C2%A2n%20terraza2-1.png?v=1575603744173')}
+.card:nth-of-type(7) .rightside{background-image:url('https://cdn.glitch.com/78b0abca-2644-43d4-8b2a-290653e271f6%2FMercado-de-la-Paz-3.png?v=1575603749887')}
+.card:nth-of-type(9) .rightside{background-image:url('https://cdn.glitch.com/78b0abca-2644-43d4-8b2a-290653e271f6%2FTripea-Mercado-de-Vallehermoso-01.png?v=1575603762086')}
+
+
+.card:nth-of-type(1) .rightside:hover{background-image:url('https://cdn.glitch.com/78b0abca-2644-43d4-8b2a-290653e271f6%2Fcard1flip.png?v=1575067454808')}
+.card:nth-of-type(3) .rightside:hover{background-image:url('https://cdn.glitch.com/78b0abca-2644-43d4-8b2a-290653e271f6%2Fcard2flipped.png?v=1575067771743')}
+.card:nth-of-type(5) .rightside:hover{background-image:url('https://cdn.glitch.com/78b0abca-2644-43d4-8b2a-290653e271f6%2Fcard3flipped.png?v=1575067775329')}
+.card:nth-of-type(7) .rightside:hover{background-image:url('https://cdn.glitch.com/78b0abca-2644-43d4-8b2a-290653e271f6%2Fcard4flipped.png?v=1575067780392')}
+.card:nth-of-type(9) .rightside:hover{background-image:url('https://cdn.glitch.com/78b0abca-2644-43d4-8b2a-290653e271f6%2Fcard5flipped.png?v=1575068045150')}
+
+.rightside:hover {color:#444;}
+
+.betwixt-cards span {
+  font-size:48px;
+}
+#blankWhiteSpace {height:90px;position:relative;background:transparent;padding-top:40px;}
+
+#stylized-map {
+  background-image:url("https://cdn.glitch.com/78b0abca-2644-43d4-8b2a-290653e271f6%2FtransparentCity.png?v=1575345870702");
+  background-size:contain;
+  max-width:900px;
+  min-height:180px;
+  margin:40px auto auto auto;
+  background-repeat:no-repeat;
+}
+
+iframe {
+border:1px solid transparent;
+  border-radius:6px;
+ max-width:900px;
+  width:80%;
+  height:400px;
+ margin: auto;
+}
+
+#bottom-border {
+  width:100%;
+  height:100px;
+  background-image:url('https://cdn.glitch.com/78b0abca-2644-43d4-8b2a-290653e271f6%2Fbottom_of_page.png?v=1575300797892');
+}
+
+.arrows {transition:all 0.75s ease-in;;position:absolute;opacity:0;height:20px;width:30px;background-size:contain;background-image:url('https://cdn.glitch.com/78b0abca-2644-43d4-8b2a-290653e271f6%2Fdark_Arrow.png?v=1575339850489')}
+
+#arrow-1 {top:38%;left:28%;}
+#arrow-2 {top:78%;left:43%}
+#arrow-3 {top:100%;left:58%;transform:rotate(-60deg);}
+#arrow-4 {top:65%;left:73%;transform:rotate(-60deg);}
+#arrow-5 {top:25%;left:88%;}
+
+
+  
+  @media only screen and (max-width:600px){
+    header {height:200px;}
+    h3 {font-size:24px;height:70px;}
+    .card {max-width:90%;}
+    .leftside,.rightside {display:block;width:100%;}
+    h3 {max-width:90%;}
+  }
