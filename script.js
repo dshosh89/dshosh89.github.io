@@ -1,110 +1,54 @@
-
-
-$(document).ready(function() {
-  /* ^this puts everything in a function that runs once the page has fully loaded.*/
-  var cartTotal = sessionStorage.getItem("cartTotal"); //get the # of things in the cart from storage
-  if (cartTotal == null){
-    cartTotal = 0;
-  }
-  $(".cart sup").text(cartTotal); //change the text in the cart link to be the # we got from storage
-  $(".details a").click(function() {//set the click event on the 'view details' links
-    /* ^all <a> tags that are children of an element with a class of 'details' will now fire this function on being clicked.*/
-    var product = $(this).parent().parent().find("p").html();
-    /*^ now the variable 'product' has the value of that p tag's text from the HTML */
-    sessionStorage.setItem("product", product);
-    /* ^save it in local storage as 'product' - we will retrieve it later by using this name.*/
-  });
-
-  if ($("body").hasClass("detailsPage")) {
-    /*^this is an easy way to check if we are on the details page or not, since the script runs on every page.*/
-    var productName = location.search;
-    productName = productName.replace("?","");
-    /*^ get the bun name we stored earlier and set it as a new variable*/
-    var price;
-    var description; 
-    /* ^we will need these two values in a minute */
-    productName = productName.replace("%20"," ");//get rid of the thing we had to do to make the querystring parameter work
-    $(".name").text(productName);
-    /* ^this sets the text in the sidebar to the name of the bun we picked on the last page
-    
-    go through all six buns and sets the price
-    and description variables above to be different values, depending on the bun name from
-    local storage*/
-    console.log(productName)
-    if (productName == "Walnut") {
-      price = "$3.50";
-      description =
-        "One of our year-round favorites, the walnut bun does not disappoint. Freshly crushed walnuts bring out the subtle flavors of cinnamon. These buns can be delivered.";
-    }
-    if (productName == "Gluten Free") {
-      price = "$3.75";
-      description =
-        "One of our year-round favorites, the gluten free bun does not disappoint. Freshly crushed gluten brings out the subtle flavors of cinnamon. These buns can be delivered.";
-    }
-    if (productName == "Original") {
-      price = "$3.00";
-      description =
-        "One of our year-round favorites, the original bun does not disappoint.";
-    }
-    if (productName == "Pumpkin Spice") {
-      price = "$3.75";
-      description =
-        "One of our year-round favorites, the pumpkin spice bun does not disappoint. Freshly crushed pumpkin spice brings out the subtle flavors of cinnamon. These buns can be delivered.";
-    }
-    if (productName == "Blackberry") {
-      price = "$3.50";
-      description =
-        "One of our year-round favorites, the blackberry bun does not disappoint. Freshly crushed blackberries bring out the subtle flavors of cinnamon. These buns can be delivered.";
-    }
-    if (productName == "Caramel Pecan") {
-      price = "$3.75";
-      description =
-        "One of our year-round favorites, the caramel pecan bun does not disappoint. Freshly crushed pecans bring out the subtle flavors of cinnamon. These buns can be delivered.";
-    }
-    $(".description").text(description);
-    $(".price").text(price);
-    console.log(price)
-      sessionStorage.setItem('price',price);
-    /*^ now that we have set values for the price and description variables through our if statements, we can set the text of
-    those two paragraphs to be the value of the variables */
-    }
+$(document).ready(function(){
   
-  $('.glaze select').change(function(){
-      sessionStorage.setItem("glaze", $(this).val());
-  });
-  
-  $('.quantity select').change(function(){
-      sessionStorage.setItem("quantity", $(this).val());
-  });
-
-  $("button").click(function() {
-    /* event binding on the 'add to cart' button -another anonymous function */
-    cartTotal = parseInt(cartTotal);
-    cartTotal = cartTotal+1;
-    //increase the number of items in the cart by one
-    $(".cart sup").text(cartTotal);
-    //update that value in the HTML of the 'cart' link
-    sessionStorage.setItem("cartTotal", cartTotal);
-    //update the value in local storage so it will be correct even if user goes to another page
-  });
-  
-  if ($('body').hasClass('shoppingCart')){//same way of telling the page as on details page
-    var detailName = sessionStorage.getItem("product");
-    var itemPrice = sessionStorage.getItem("price").replace("$","");
-    var detailQty = sessionStorage.getItem("quantity");
-    var detailGlaze = sessionStorage.getItem("glaze");
-    var total = itemPrice * detailQty;
-        $("#detailName").html(detailName);
-        $("#itemPrice").html("$" + itemPrice);
-        $("#detailQty").html(detailQty);
-        $("#detailGlaze").html(detailGlaze);
-        $("#cartTotal").html(total);
-  }
-  
-  $('.delete').click(function(){
-    $('.cartBox').html('');
-    cartTotal = 0;
-        $(".cart sup").text(cartTotal);
-    sessionStorage.setItem("cartTotal",cartTotal)
-  });
+$('.map-icon').click(function(event){
+   event.preventDefault();
+  var me = $(this).attr('href');
+  console.log(me);
+  var otherMe = $(''+me+'');
+  console.log(otherMe.offset().top);
+  $('html, body').animate({
+    scrollTop: $(''+me+'').offset().top
+ }, 2000);
 });
+  
+  $('.map-icon').hover(function(){
+    var me = $(this).attr('href').replace('#','');
+    showArrow(me);
+  });
+  
+  function showArrow(number){
+    $('.arrows').css('opacity',0);
+    if (number != 5){
+    $('#arrow-' + number ).css('opacity',1);
+    }
+  }
+  
+   $('.map-icon').mouseout(function(){
+    $('.arrows').css('opacity',0);
+  });
+  
+    var h3 = $('h3');
+    var h3Text = "Your guide to exploring Madrid. One local market at a time."
+    var textToShow;
+  var i = 0;
+  function showText(){
+        setTimeout(function(){
+                 textToShow = h3Text.slice(0,i).toString();
+                 h3.html(textToShow)
+          if (i<h3Text.length){               
+            if (i == 32){
+              setTimeout(function(){
+                i++
+                showText();
+              },300)
+            } else{
+          i++
+          showText();
+                 }
+          }
+        },75);
+  }
+    
+ showText();
+  
+  });
